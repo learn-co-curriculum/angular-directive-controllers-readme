@@ -33,7 +33,7 @@ function TwitterCard() {
 	return {
 		template: [
 			'<div class="twitter">',
-				'<a href="https://twitter.com/{{ twitter }}">Follow @{{ twitter }} on Twitter!</a>',
+				'<a href="https://twitter.com/{{ handle }}">Follow @{{ handle }} on Twitter!</a>',
 			'</div>'
 		].join(''),
 		scope: {
