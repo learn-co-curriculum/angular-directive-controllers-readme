@@ -12,7 +12,7 @@ Whilst using `scope` is awesome, we can't really do much with it other than just
 
 ## Directive Controllers
 
-We can create controllers for our directives - awesome!
+We can create controllers for our directives - awesome! We'd generally use these for functions to change data or retrieve data from a service (we might have a list of contacts), or manipulate the data given us (we might want to verify an email address or phone number for a contact).
 
 Our controllers, much like the controllers we've created before, allow us to directly access `$scope` (the values passed through to us from attributes), as well as all the services that we have created, as well as built-in ones too, such as `$timeout`.
 
@@ -25,6 +25,8 @@ This, for now, will take a function that will become our directive's controller:
 ```html
 <twitter-card handle="billgates"></twitter-card>
 ```
+
+(this will be the code to initiate all of our examples)
 
 ```js
 function TwitterCard() {
@@ -89,7 +91,7 @@ function TwitterCard() {
 	return {
 		template: [
 			'<div class="twitter">',
-				'<a href="https://twitter.com/{{ twitter }}">Follow @{{ twitter }} on Twitter!</a>',
+				'<a href="https://twitter.com/{{ handle }}">Follow @{{ handle }} on Twitter!</a>',
 				'<button ng-click="ctrl.changeHandle()">Change Handle</button>',
 			'</div>'
 		].join(''),
@@ -117,6 +119,8 @@ As you can see here, we're setting our controller as `ctrl`. This means that any
 
 You might have noticed how `handle` is still on our `$scope` object - this is because it's passed through as a scope property. We'll cover how to get that into `this` soon.
 
+We've got a function to change our Twitter handle. This updates `$scope` - where our data is stored. As we trigger this event using `ng-click`, any changes that we do to `$scope` inside the function is automatically reflected in the view.
+
 ## Existing Controllers
 
 Instead of a function, we can pass through a string to the `controller` property as well - much like what we do with `ng-controller`. This means we can use an existing controller as our directive's controller. It also means that we can remove the `controllerAs` property if we're using a string, as we can do `'SomeController as some'`.
@@ -138,7 +142,7 @@ function TwitterCard() {
 	return {
 		template: [
 			'<div class="twitter">',
-				'<a href="https://twitter.com/{{ twitter }}">Follow @{{ twitter }} on Twitter!</a>',
+				'<a href="https://twitter.com/{{ handle }}">Follow @{{ handle }} on Twitter!</a>',
 				'<button ng-click="ctrl.changeHandle()">Change Handle</button>',
 			'</div>'
 		].join(''),
@@ -154,3 +158,7 @@ angular
 	.module('app')
 	.directive('twitterCard', TwitterCard);
 ```
+
+Here we've got our controller initiated with our scope data, ready for us to manipulate it.
+
+Now we can manipulate our data to our hearts content. Our controllers can also have our services (such as `$timeout` or a custom service) injected so we can utilise the power of them in our directives too!
