@@ -40,7 +40,7 @@ function TwitterCard() {
             handle: '@'
         },
         controller: function ($scope) {
-            // $scope.handle === 'billgates'
+            // $scope.handle = 'billgates'
         },
 		restrict: 'E'
 	};
@@ -162,3 +162,5 @@ angular
 Here we've got our controller initiated with our scope data, ready for us to manipulate it.
 
 Now we can manipulate our data to our hearts content. Our controllers can also have our services (such as `$timeout` or a custom service) injected so we can utilise the power of them in our directives too!
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-directive-controllers-readme'>Angular Directive Controllers</a> on Learn.co and start learning to code for free.</p>
