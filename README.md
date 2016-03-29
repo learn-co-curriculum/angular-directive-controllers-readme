@@ -26,7 +26,7 @@ This, for now, will take a function that will become our directive's controller:
 <twitter-card handle="billgates"></twitter-card>
 ```
 
-(this will be the code to initiate all of our examples)
+This will be the code to initiate all of our examples. Below, we'll define our controller function and inject `$scope`. Our `$scope` will have a property called `handle` that will be set to `"billgates"`!
 
 ```js
 function TwitterCard() {
@@ -40,7 +40,7 @@ function TwitterCard() {
             handle: '@'
         },
         controller: function ($scope) {
-            // $scope.handle === 'billgates'
+            // $scope.handle returns 'billgates' 
         },
 		restrict: 'E'
 	};
