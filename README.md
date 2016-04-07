@@ -82,7 +82,7 @@ This will set our Twitter handle to "angularjs" after 5 seconds.
 
 ## controllerAs
 
-As you've learned already, the best practise is in fact to use the `controllerAs` syntax. But we're passing a function through as our controller, so how are we going to tell Angular that we want to use `controllerAs`? You guessed it - the `controllerAs` property.
+As you've learned already, the best practice is in fact to use the `controllerAs` syntax. But we're passing a function through as our controller, so how are we going to tell Angular that we want to use `controllerAs`? You guessed it - the `controllerAs` property.
 
 Much like our `ng-controller`, where we use `SomeController as some`, we use `controllerAs` and put it's value as `some` (or whatever you want to call it).
 
@@ -162,3 +162,5 @@ angular
 Here we've got our controller initiated with our scope data, ready for us to manipulate it.
 
 Now we can manipulate our data to our hearts content. Our controllers can also have our services (such as `$timeout` or a custom service) injected so we can utilise the power of them in our directives too!
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-directive-controllers-readme'>Angular Directive Controllers</a> on Learn.co and start learning to code for free.</p>
