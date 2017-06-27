@@ -84,7 +84,7 @@ This will set our Twitter handle to "angularjs" after 5 seconds.
 
 As you've learned already, the best practice is in fact to use the `controllerAs` syntax. But we're passing a function through as our controller, so how are we going to tell Angular that we want to use `controllerAs`? You guessed it - the `controllerAs` property.
 
-Much like our `ng-controller`, where we use `SomeController as some`, we use `controllerAs` and put it's value as `some` (or whatever you want to call it).
+Much like our `ng-controller`, where we use `SomeController as some`, we use `controllerAs` and put its value as `some` (or whatever you want to call it).
 
 ```js
 function TwitterCard() {
@@ -119,7 +119,7 @@ As you can see here, we're setting our controller as `ctrl`. This means that any
 
 You might have noticed how `handle` is still on our `$scope` object - this is because it's passed through as a scope property. We'll cover how to get that into `this` soon.
 
-We've got a function to change our Twitter handle. This updates `$scope` - where our data is stored. As we trigger this event using `ng-click`, any changes that we do to `$scope` inside the function is automatically reflected in the view.
+We've got a function to change our Twitter handle. This updates `$scope` - where our data is stored. As we trigger this event using `ng-click`, any changes that we make to `$scope` inside the function are automatically reflected in the view.
 
 ## Existing Controllers
 
@@ -161,6 +161,6 @@ angular
 
 Here we've got our controller initiated with our scope data, ready for us to manipulate it.
 
-Now we can manipulate our data to our hearts content. Our controllers can also have our services (such as `$timeout` or a custom service) injected so we can utilise the power of them in our directives too!
+Now we can manipulate our data to our heart's content. Our controllers can also have our services (such as `$timeout` or a custom service) injected so that we can utilize the power of them in our directives too!
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/angular-directive-controllers-readme'>Angular Directive Controllers</a> on Learn.co and start learning to code for free.</p>
